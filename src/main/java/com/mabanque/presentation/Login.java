@@ -1,5 +1,6 @@
 package com.mabanque.presentation;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,19 +12,18 @@ import java.io.IOException;
 public class Login extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, jakarta.servlet.ServletException {
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     this.getServletContext().getRequestDispatcher("/view/login.jsp").forward(request, response);
   }
 
   @Override
   public void doPost(HttpServletRequest request,
-    HttpServletResponse response) throws IOException,
-    jakarta.servlet.ServletException {
+    HttpServletResponse response) throws IOException, ServletException {
     String name = request.getParameter("name");
     String pass = request.getParameter("pass");
-    request.setAttribute("name", name);
-    request.setAttribute("pass", pass);
-    this.getServletContext().getRequestDispatcher("/view/login.jsp").forward(request, response);
+    request.setAttribute("name",name);
+    request.setAttribute("pass",pass);
+    doGet(request, response);
   }
 
   @Override

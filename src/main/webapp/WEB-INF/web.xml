@@ -5,10 +5,32 @@
          version="5.0">
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>com.mabanque.presentation.Login</servlet-class>
+        <servlet-class>com.mybank.controller.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Dashboard</servlet-name>
+        <servlet-class>com.mybank.controller.Dashboard</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Dashboard</servlet-name>
+        <url-pattern>/client/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Error404</servlet-name>
+        <servlet-class>com.mybank.controller.Error404</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Error404</servlet-name>
+        <url-pattern>/404</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404</location>
+    </error-page>
 </web-app>

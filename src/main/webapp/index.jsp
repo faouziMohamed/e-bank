@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+    <title>JSP - Hello World</title>
 </head>
 <body>
 <h1><%= "My very first land page using JEE" %>

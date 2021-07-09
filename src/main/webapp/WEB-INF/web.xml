@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="https://jakarta.ee/xml/ns/jakartaee"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-         version="5.0">
+<web-app
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>com.mybank.controller.Login</servlet-class>
@@ -29,8 +30,16 @@
         <servlet-name>Error404</servlet-name>
         <url-pattern>/404</url-pattern>
     </servlet-mapping>
+
     <error-page>
         <error-code>404</error-code>
         <location>/404</location>
     </error-page>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/taglib.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
 </web-app>

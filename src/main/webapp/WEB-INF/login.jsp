@@ -6,6 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Authentication page</title>
     <link
             rel="stylesheet"
@@ -17,9 +18,9 @@
 <section class="body-content">
     <h1 class="title">Welcome to your online Bank</h1>
     <form
-            action="${pageContext.request.contextPath}/login"
-            method="POST"
-            class="auth-form">
+        action="${pageContext.request.contextPath}/login"
+        method="POST"
+        class="auth-form">
         <section class="form-content">
             <div class="row-content identifiant">
                 <label for="name" class="label-auth">

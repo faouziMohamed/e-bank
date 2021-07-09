@@ -10,7 +10,8 @@ public class Client {
   public Client(String username, String password, String firstName,
     String name, double balance) {
     this.username = username;
-    this.password = password;this.firstName = firstName;
+    this.password = password;
+    this.firstName = firstName;
     this.name = name;
     this.balance = balance;
   }

@@ -56,14 +56,17 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals><goal>copy</goal></goals>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.heroku</groupId>
                                     <artifactId>webapp-runner</artifactId>
                                     <version>9.0.41.0</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
+                                    <destFileName>webapp-runner.jar
+                                    </destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>

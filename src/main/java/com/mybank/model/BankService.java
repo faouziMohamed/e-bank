@@ -10,7 +10,7 @@ public class BankService {
   private static HashMap<String, Client> clients;
 
   private BankService() {
-    clients = new HashMap<String, Client>();
+    clients = new HashMap<>();
     Client[] arr = {
       new Client("faouzi", "12345", "Mohamed", "Faouzi", 14_046),
       new Client("khalid", "6789a", "Khalid", "Housni", 154_900),

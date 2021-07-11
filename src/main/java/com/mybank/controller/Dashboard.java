@@ -1,42 +1,41 @@
 package com.mybank.controller;
 
+import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.Client;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.time.LocalTime;
 
-@WebServlet(name = "Dashboard", value = "/client/dashboard")
-public class Dashboard extends HttpServlet {
+@WebServlet(name = "Dashboard", value = "/dashboard")
+public class Dashboard extends HttpServlet implements ServletUtils {
   @Override
   protected void doGet(HttpServletRequest request,
     HttpServletResponse response) throws ServletException, IOException {
-    Client client = null;
-    int hour = 0;
+
     try {
-      HttpSession session = request.getSession(false);
-      client = (Client) session.getAttribute("client");
-      hour = LocalTime.now().getHour();
-
-      if (client == null) {
-        throw new NullPointerException();
-      }
-
+      Client client = assertThereIsClientConnected(request);
+      int hour = LocalTime.now().getHour();
       request.setAttribute("hour", hour);
       request.setAttribute("client", client);
-      this.getServletContext()
-        .getRequestDispatcher("/WEB-INF/users/main.jsp")
-        .forward(request, response);
-
-    } catch (IllegalStateException | NullPointerException e) {
+      ShowDashboardPage(request, response);
+    } catch (IllegalStateException
+               | NullPointerException
+               | NoClientConnectedException e) {
       request.setAttribute("error", "You need to connect in order to continue");
-      response.sendRedirect(request.getContextPath() + "/login");
+      sendUserToLoginPage(request, response);
     }
+  }
+
+  private void ShowDashboardPage(HttpServletRequest request,
+    HttpServletResponse response) throws ServletException, IOException {
+    this.getServletContext()
+      .getRequestDispatcher("/WEB-INF/users/dashboard.jsp")
+      .forward(request, response);
   }
 
   @Override

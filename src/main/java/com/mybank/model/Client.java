@@ -1,38 +1,85 @@
 package com.mybank.model;
 
+import java.util.TreeMap;
+
 public class Client {
-  private final String username;
-  private final String password;
-  private final String firstName;
-  private final String name;
-  private final double balance;
+  private String username;
+  private String password;
+  private String firstName;
+  private String name;
+  private TreeMap<String, SavingAccount> allSavingAccount;
+  private TreeMap<String, CurrentAccount> allCurrentAccount;
 
   public Client(String username, String password, String firstName,
-    String name, double balance) {
+                String name,
+                TreeMap<String, SavingAccount> allSavingAccount,
+                TreeMap<String, CurrentAccount> allCurrentAccount) {
     this.username = username;
-    this.password = password;this.firstName = firstName;
+    this.password = password;
+    this.firstName = firstName;
     this.name = name;
-    this.balance = balance;
+    this.allSavingAccount = allSavingAccount;
+    this.allCurrentAccount = allCurrentAccount;
+  }
+
+  public Client(String username, String password, String firstName,
+                String name) {
+    this(username, password, firstName, name, new TreeMap<>(), new TreeMap<>());
+  }
+
+  public Client(String username, String password, String firstName,
+                String name, double balance) {
+    this(username, password, firstName, name, new TreeMap<>(), new TreeMap<>());
+    SavingAccount sva = new SavingAccount(1, balance, firstName);
+    allSavingAccount.put(sva.getWording(), sva);
   }
 
   public String getUsername() {
     return username;
   }
 
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public String getName() {
-    return name;
+  public void setUsername(String username) {
+    this.username = username;
   }
 
   public String getPassword() {
     return password;
   }
 
-  public double getBalance() {
-    return balance;
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public TreeMap<String, SavingAccount> getAllSavingAccount() {
+    return allSavingAccount;
+  }
+
+  public void setAllSavingAccount(TreeMap<String, SavingAccount> allSavingAccount) {
+    this.allSavingAccount = allSavingAccount;
+  }
+
+  public TreeMap<String, CurrentAccount> getAllCurrentAccount() {
+    return allCurrentAccount;
+  }
+
+  public void setAllCurrentAccount(TreeMap<String, CurrentAccount> allCurrentAccount) {
+    this.allCurrentAccount = allCurrentAccount;
   }
 
   @Override
@@ -42,25 +89,24 @@ public class Client {
 
     Client client = (Client) o;
 
-    if (Double.compare(client.getBalance(), getBalance()) != 0) {
-      return false;
-    }
     if (!getUsername().equals(client.getUsername())) { return false; }
+    if (!getPassword().equals(client.getPassword())) { return false; }
     if (!getFirstName().equals(client.getFirstName())) { return false; }
     if (!getName().equals(client.getName())) { return false; }
-    return getPassword().equals(client.getPassword());
+    if (!getAllSavingAccount().equals(client.getAllSavingAccount())) {
+      return false;
+    }
+    return getAllCurrentAccount().equals(client.getAllCurrentAccount());
   }
 
   @Override
   public int hashCode() {
-    int result;
-    long temp;
-    result = getUsername().hashCode();
+    int result = getUsername().hashCode();
+    result = 31 * result + getPassword().hashCode();
     result = 31 * result + getFirstName().hashCode();
     result = 31 * result + getName().hashCode();
-    result = 31 * result + getPassword().hashCode();
-    temp = Double.doubleToLongBits(getBalance());
-    result = 31 * result + (int) (temp ^ (temp >>> 32));
+    result = 31 * result + getAllSavingAccount().hashCode();
+    result = 31 * result + getAllCurrentAccount().hashCode();
     return result;
   }
 }

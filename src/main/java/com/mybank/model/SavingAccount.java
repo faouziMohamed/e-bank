@@ -4,8 +4,8 @@ public class SavingAccount extends BankAccount {
   private double interestRate;
   private double ceiling;
 
-  public SavingAccount(int accountId, double balance, String wording) {
-    super(accountId, AccountTypeEnum.SavingAccount, balance, wording);
+  public SavingAccount(double balance, String wording) {
+    super(balance, wording);
   }
 
   public double getInterestRate() {

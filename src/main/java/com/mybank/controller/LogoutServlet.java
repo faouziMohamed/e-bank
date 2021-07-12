@@ -9,11 +9,12 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "Logout", value = "/logout")
-public class Logout extends HttpServlet implements ServletUtils {
+@WebServlet(name = "LogoutServlet", value = "/logout")
+public class LogoutServlet extends HttpServlet implements ServletUtils {
   @Override
   protected void doGet(HttpServletRequest request,
-    HttpServletResponse response) throws ServletException, IOException {
+                       HttpServletResponse response) throws ServletException,
+                                                            IOException {
     try {
       assertThereIsClientConnected(request);
       disconnectUser(request);
@@ -28,7 +29,7 @@ public class Logout extends HttpServlet implements ServletUtils {
   }
 
   private void showLogoutPage(HttpServletRequest request,
-    HttpServletResponse response) throws ServletException, IOException {
+                              HttpServletResponse response) throws ServletException, IOException {
     request.setAttribute("title", "See you soon!");
     request.setAttribute("pageHeading", "You have been disconnected!");
     this

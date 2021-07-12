@@ -13,7 +13,8 @@
   <a href="${pageContext.request.contextPath}/login" class="go-back-to-login">here</a>.
 </p>
 
-<script src="${pageContext.request.contextPath}/resources/js/logout.js"></script>
+<script
+ src="${pageContext.request.contextPath}/resources/js/logout.js"></script>
 
 </body>
 </html>

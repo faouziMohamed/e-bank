@@ -3,25 +3,28 @@ package com.mybank.model;
 import com.mybank.exception.ClientNotFoundException;
 import com.mybank.exception.PasswordErrorException;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class BankService {
   private static final BankService theBank = new BankService();
-  private static HashMap<String, Client> clients;
+  private static TreeMap<String, Client> allClients;
 
   private BankService() {
-    clients = new HashMap<>();
+    allClients = new TreeMap<>();
     Client[] arr = {
-      new Client("faouzi", "12345", "Mohamed", "Faouzi", 14_046),
-      new Client("khalid", "6789a", "Khalid", "Housni", 154_900),
-      new Client("marc", "bcdef", "Marc", "Dave", 16_846),
-      new Client("fsk21", "password", "Jaafar", "Abuchabaka", 269_046),
-      new Client("tekashi", "fb/fzmhd", "Diplo", "Killer", 14_385_000),
-      new Client("hero99", "gh/faouzimohamed", "Allen", "Barry", 645_500),
+      Client.getTestClient("faouzi", "12345", 9, 2),
+      Client.getTestClient("fsk", "67890", 15, 4),
+      Client.getTestClient("hadi", "password", 11, 9),
+      Client.getTestClient("douze", "linux", 3, 5),
+      Client.getTestClient("fsk21", "12345", 0, 12),
+      Client.getTestClient("mohamed", "faouzi", 6, 41),
+      Client.getTestClient("admin", "admin", 21, 6),
+      Client.getTestClient("guest", "pass", 6, 7),
+      Client.getTestClient("fawzi", "math", 4, 3)
     };
 
     for (Client c : arr) {
-      clients.put(c.getUsername(), c);
+      allClients.put(c.getUsername(), c);
     }
   }
 
@@ -30,8 +33,8 @@ public class BankService {
   }
 
   public Client findClient(String userName, String password) throws com.mybank.exception.BankException {
-    if (clients.containsKey(userName)) {
-      Client c = clients.get(userName);
+    if (allClients.containsKey(userName)) {
+      Client c = allClients.get(userName);
       if (password.equals(c.getPassword())) {
         return c;
       }
@@ -40,8 +43,7 @@ public class BankService {
     throw new ClientNotFoundException("Client not found");
   }
 
-  public HashMap<String, Client> allClients() {
-    return clients;
+  public TreeMap<String, Client> getAllClients() {
+    return allClients;
   }
-
 }

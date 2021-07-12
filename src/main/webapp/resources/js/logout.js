@@ -1,4 +1,4 @@
-void (function(){
+void (function () {
     function redirectToLogin(selector) {
         let timeout = document.querySelector(selector);
         let interval = null;

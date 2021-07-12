@@ -11,11 +11,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalTime;
 
-@WebServlet(name = "Dashboard", value = "/dashboard")
-public class Dashboard extends HttpServlet implements ServletUtils {
+@WebServlet(name = "DashboardServlet", value = "/dashboard")
+public class DashboardServlet extends HttpServlet implements ServletUtils {
   @Override
   protected void doGet(HttpServletRequest request,
-    HttpServletResponse response) throws ServletException, IOException {
+                       HttpServletResponse response) throws ServletException,
+                                                            IOException {
 
     try {
       Client client = assertThereIsClientConnected(request);
@@ -32,15 +33,15 @@ public class Dashboard extends HttpServlet implements ServletUtils {
   }
 
   private void ShowDashboardPage(HttpServletRequest request,
-    HttpServletResponse response) throws ServletException, IOException {
+                                 HttpServletResponse response) throws ServletException, IOException {
     this.getServletContext()
-      .getRequestDispatcher("/WEB-INF/users/dashboard.jsp")
-      .forward(request, response);
+        .getRequestDispatcher("/WEB-INF/users/dashboard.jsp")
+        .forward(request, response);
   }
 
   @Override
   protected void doPost(HttpServletRequest request,
-    HttpServletResponse response) throws ServletException, IOException {
+                        HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }
 }

@@ -1,6 +1,6 @@
 package com.mybank.exception;
 
-public class NoClientConnectedException extends BankException{
+public class NoClientConnectedException extends BankException {
   public NoClientConnectedException(String reason) {
     super(reason);
   }

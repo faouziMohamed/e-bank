@@ -27,4 +27,8 @@ public interface ServletUtils {
                                    HttpServletResponse response) throws IOException {
     response.sendRedirect(request.getContextPath() + "/login");
   }
+
+  default String getFullPath(HttpServletRequest request, String path) {
+    return request.getContextPath() + path;
+  }
 }

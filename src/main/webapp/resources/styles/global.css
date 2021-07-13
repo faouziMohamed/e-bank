@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+a, a:visited {
+  color: #022045;
+  text-decoration: none;
+}
+
+:is(a, a:visited):hover {
+  text-decoration: underline;
+}

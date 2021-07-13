@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <jsp:include page="../components/head-meta.jsp">
@@ -13,17 +14,29 @@
     <table class="curr-acc">
       <tr class="row">
         <th class="table-header"><c:out value="${header1}"/></th>
-        <th class="table-header"><c:out value="${header2}"/></th>
-        <th class="table-header"><c:out value="${header3}"/></th>
-        <th class="table-header"><c:out value="${header4}"/></th>
+        <th class="table-header"><c:out value="${header2} (MAD)"/></th>
+        <th class="table-header"><c:out value="${header3} (MAD)"/></th>
+        <th class="table-header"><c:out value="${header4} (MAD)"/></th>
       </tr>
 
       <c:forEach var="account" items="${allAccounts}">
         <tr class="row row-data">
           <td class="col-data"><c:out value="${account.wording}"/></td>
-          <td class="col-data"><c:out value="${account.balance}"/></td>
-          <td class="col-data"><c:out value=">${account.interestRate}"/></td>
-          <td class="col-data"><c:out value="${account.ceiling}"/></td>
+          <td class="col-data">
+            <fmt:formatNumber
+             value="${account.balance}"
+             type="number"/>
+          </td>
+          <td class="col-data">
+            <fmt:formatNumber
+             value="${account.interestRate}"
+             type="number"/>
+          </td>
+          <td class="col-data">
+            <fmt:formatNumber
+             value="${account.ceiling}"
+             type="number"/>
+          </td>
         </tr>
       </c:forEach>
     </table>

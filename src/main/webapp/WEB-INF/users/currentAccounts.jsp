@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <jsp:include page="../components/head-meta.jsp">
@@ -13,19 +14,23 @@
     <table class="curr-acc">
       <tr class="row">
         <th class="table-header"><c:out value="${header1}"/></th>
-        <th class="table-header"><c:out value="${header2}"/></th>
+        <th class="table-header"><c:out value="${header2} (MAD)"/></th>
       </tr>
 
       <c:forEach var="account" items="${allAccounts}">
         <tr class="row row-data">
           <td class="col-data"><c:out value="${account.wording}"/></td>
-          <td class="col-data"><c:out value="${account.balance}"/></td>
+          <td class="col-data">
+            <fmt:formatNumber
+             value="${account.balance} "
+             type="number"/>
+          </td>
         </tr>
       </c:forEach>
     </table>
   </c:when>
   <c:otherwise>
-    <c:out value="You double not have Current Accounts"/>
+    <c:out value="You do not have Current Accounts"/>
   </c:otherwise>
 </c:choose>
 <a href="${pageContext.request.contextPath}/dashboard"

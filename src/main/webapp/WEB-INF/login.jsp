@@ -10,7 +10,7 @@
    href="${pageContext.request.contextPath}/resources/styles/login.css"
   />
 </head>
-<body>
+<body class="main-body">
 <section class="body-content">
   <h1 class="title"><c:out value="${pageHeading}"/></h1>
   <c:if test="${!empty error}">

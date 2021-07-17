@@ -24,9 +24,13 @@ public class LoginServlet extends HttpServlet implements ServletUtils {
       String mainPage = getFullPath(request, "/dashboard");
       redirectUserToMainPage(response, mainPage);
     } catch (NoClientConnectedException | NullPointerException ignored) {
+
       request.setAttribute("title", "Authentication page");
       request.setAttribute("pageHeading", "Welcome to your online Bank");
-      this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+      this
+        .getServletContext()
+        .getRequestDispatcher("/WEB-INF/login.jsp")
+        .forward(request, response);
     }
 
   }

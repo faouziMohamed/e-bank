@@ -1,5 +1,7 @@
 import * as Plot from 'https://cdn.skypack.dev/@observablehq/plot@0.1';
 
+'use strict';
+
 export function getPlot(props) {
   let { data, width, height } = props;
   let plot = Plot.plot({

@@ -1,0 +1,165 @@
+/* @import url("https://pro.fontawesome.com/releases/v5.15.2/css/all.css"); */
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: bisque;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: rgb(239, 253, 198);
+}
+
+:is(a, a:visited):hover {
+  text-decoration: underline;
+}
+
+.scaled-profile-pic-wrapper {
+  display: flex;
+  align-items: center;
+  width: 4.1em;
+  justify-content: space-evenly;
+  color: #fdfdfd;
+}
+
+.user-profile-picture-scaled {
+  min-width: 2.1em;
+  background-color: #223344;
+  border: 1px solid #b5c2c2;
+  border-radius: 50%;
+}
+
+.sort-down, .user-profile-picture-scaled {
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-inline-end: 0.4em;
+  background-color: #03162f;
+}
+
+.wrapper {
+  position: absolute;
+  top: calc(100% + 0.6em);
+
+  display: flex;
+  width: 10em;
+  min-width: 5em;
+  flex-direction: column;
+  border-radius: 0.65em;
+  border: 1px solid gray;
+  background-color: #03162f;
+  color: aliceblue;
+  box-shadow: 1px 1px 1px 2px #223344;
+}
+
+.user-profile {
+}
+
+.user-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.user-picture-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.4em;
+}
+
+.user-picture {
+  display: block;
+  background-color: rgb(225, 225, 225);
+  border-radius: 50%;
+  width: 8.675em;
+  height: 8.675em;
+  padding: 0.1em;
+}
+
+.user-name {
+  display: block;
+  padding-block-start: 0.5em;
+  padding-inline: 0.2em;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(43, 81, 99, 0.51);
+  width: 100%;
+  border-block-end: 3px solid rgb(4, 22, 22);
+}
+
+.action-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.actions-item {
+  flex: 1 0 100%;
+  display: block;
+  width: 100%;
+}
+
+.action-item-link {
+  display: block;
+  width: 100%;
+  padding: 0.16em 0.5em;
+  border-block-end: 0.001em solid gray;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.action-item-link:hover {
+  background-color: #05141c;
+}
+
+.actions-item:last-of-type > .action-item-link {
+  border-block-end: none;
+}
+
+.actions-item:last-of-type:hover > .action-item-link {
+  border-end-start-radius: 0.65em;
+  border-end-end-radius: 0.65em;
+}
+
+.top-arrow {
+  display: block;
+  position: absolute;
+  top: -1.7em;
+  border-style: solid;
+  border-block-width: 1em;
+  border-inline-width: 0.5em;
+  align-self: flex-end;
+  border-color: transparent transparent #03162f transparent;
+  z-index: 100;
+  right: 0.5em;
+}
+
+.hidden {
+  display: none;
+}

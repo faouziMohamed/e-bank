@@ -62,17 +62,41 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>UserApiServlet</servlet-name>
+    <servlet-class>com.mybank.controller.api.UserApiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserApiServlet</servlet-name>
+    <url-pattern>/userdata</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>Error404Servlet</servlet-name>
-    <servlet-class>com.mybank.controller.Error404Servlet</servlet-class>
+    <servlet-class>com.mybank.controller.http.errors.Error404Servlet
+    </servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Error404Servlet</servlet-name>
     <url-pattern>/404</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Error401Servlet</servlet-name>
+    <servlet-class>com.mybank.controller.http.errors.Error401Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Error401Servlet</servlet-name>
+    <url-pattern>/401</url-pattern>
+  </servlet-mapping>
+
   <error-page>
     <error-code>404</error-code>
     <location>/404</location>
+  </error-page>
+
+  <error-page>
+    <error-code>401</error-code>
+    <location>/401</location>
   </error-page>
 
   <jsp-config>

@@ -1,5 +1,6 @@
 package com.mybank.controller;
 
+import com.google.gson.Gson;
 import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.Client;
 import jakarta.servlet.ServletException;
@@ -23,6 +24,15 @@ public class DashboardServlet extends HttpServlet implements ServletUtils {
       int hour = LocalTime.now().getHour();
       request.setAttribute("hour", hour);
       request.setAttribute("client", client);
+      request.setAttribute("data", client.getAllSavingAccount().values());
+
+      Gson gson = new Gson();
+
+      String svaJsonStr = gson.toJson(client.getAllSavingAccount().values());
+      String craJsonStr = gson.toJson(client.getAllCurrentAccount().values());
+      request.setAttribute("sva", svaJsonStr);
+      request.setAttribute("cra", craJsonStr);
+
       ShowDashboardPage(request, response);
     } catch (IllegalStateException
                | NullPointerException

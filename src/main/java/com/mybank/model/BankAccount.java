@@ -21,6 +21,14 @@ public abstract class BankAccount {
     return balance;
   }
 
+  public static long getAccountIdBase() {
+    return accountIdBase;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) { return true; }
@@ -28,7 +36,7 @@ public abstract class BankAccount {
 
     BankAccount that = (BankAccount) o;
 
-    if (accountId != that.accountId) { return false; }
+    if (getAccountId() != that.getAccountId()) { return false; }
     if (Double.compare(that.getBalance(), getBalance()) != 0) {
       return false;
     }
@@ -40,7 +48,7 @@ public abstract class BankAccount {
   public int hashCode() {
     int result;
     long temp;
-    result = (int) (accountId ^ (accountId >>> 32));
+    result = (int) (getAccountId() ^ (getAccountId() >>> 32));
     temp = Double.doubleToLongBits(getBalance());
     result = 31 * result + (int) (temp ^ (temp >>> 32));
     result = 31 * result + (getWording() != null ? getWording().hashCode() : 0);

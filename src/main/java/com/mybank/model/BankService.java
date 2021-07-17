@@ -18,7 +18,7 @@ public class BankService {
       Client.getTestClient("douze", "linux", 3, 5),
       Client.getTestClient("fsk21", "12345", 0, 12),
       Client.getTestClient("mohamed", "faouzi", 6, 41),
-      Client.getTestClient("admin", "admin", 21, 6),
+      Client.getTestClient("admin", "admin", 21, 9),
       Client.getTestClient("guest", "pass", 6, 7),
       Client.getTestClient("fawzi", "math", 4, 3)
     };

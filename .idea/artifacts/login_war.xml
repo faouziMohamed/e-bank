@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="login-1.0.war">
+    <root id="archive" name="onlineBank.war">
       <element id="artifact" artifact-name="login:war exploded" />
     </root>
   </artifact>

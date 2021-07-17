@@ -1,4 +1,4 @@
-package com.mybank.controller;
+package com.mybank.controller.http.errors;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,11 +17,5 @@ public class Error404Servlet extends HttpServlet {
     this.getServletContext()
         .getRequestDispatcher("/WEB-INF/errors/404.jsp")
         .forward(request, response);
-  }
-
-  @Override
-  protected void doPost(HttpServletRequest request,
-                        HttpServletResponse response) throws ServletException, IOException {
-
   }
 }

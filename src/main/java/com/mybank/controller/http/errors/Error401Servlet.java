@@ -8,20 +8,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "Error404Servlet", value = "/404")
-public class Error404Servlet extends HttpServlet {
+@WebServlet(name = "Error404Servlet", value = "/401")
+public class Error401Servlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request,
                        HttpServletResponse response) throws ServletException,
                                                             IOException {
     this.getServletContext()
-        .getRequestDispatcher("/WEB-INF/errors/404.jsp")
+        .getRequestDispatcher("/WEB-INF/errors/401.jsp")
         .forward(request, response);
-  }
-
-  @Override
-  protected void doPost(HttpServletRequest request,
-                        HttpServletResponse response) throws ServletException, IOException {
-
   }
 }

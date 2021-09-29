@@ -4,12 +4,13 @@ body {
   background-color: #eeffaa;
 }
 
-.operation-link, .operation-link:visited {
+.operation-link,
+.operation-link:visited {
+  display: block;
+  color: #f5fdff;
   background-color: #03162f;
   border-block-end: 1px solid #d0fbfb;
   border-inline-start: 0.6em solid #040b20;
-  color: #f5fdff;
-  display: block;
   padding-block: 1.5em;
   padding-inline-start: 0.5em;
 }
@@ -23,19 +24,19 @@ body {
 }*/
 
 .load-spinner {
-  animation-direction: alternate;
-  animation-duration: 9500s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
   animation-name: rotation;
+  animation-duration: 9500s;
   animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-width: 5px;
+  border-style: solid;
   border-color: transparent transparent black black;
   border-radius: 20px;
-  border-style: solid;
-  border-width: 5px;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
+  animation-fill-mode: both;
 }
 
 @keyframes rotation {
@@ -54,20 +55,20 @@ body {
 }
 
 .main-content {
-  height: 100%;
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
 .content-wrapper {
-  background-color: brown;
   display: flex;
-  /*gap: 5px;*/
   flex-direction: column;
-  height: 100%;
-  overflow-y: auto;
+  /*gap: 5px;*/
   position: relative;
   width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: brown;
 }
 
 .main-section-wrapper {
@@ -75,8 +76,8 @@ body {
 }
 
 .main-header {
-  color: springgreen;
   font-size: 1em;
+  color: springgreen;
 }
 
 .main-navbar {
@@ -84,57 +85,58 @@ body {
 }
 
 .main-menu {
-  position: absolute;
-  left: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  position: absolute;
+  left: 0;
   width: 100%;
-  opacity: 1;
-  list-style: none;
-  background-color: transparent;
-  transform: translateY(0);
-  transition: transform .5s cubic-bezier(0.32, 1.65, 0.21, 1.03),
-  opacity .5s cubic-bezier(0, 1.09, 0.1, 0.87);
+  height: 100%;
   z-index: 1001;
+  list-style: none;
+  transition: transform 0.5s cubic-bezier(0.32, 1.65, 0.21, 1.03),
+    opacity 0.5s cubic-bezier(0, 1.09, 0.1, 0.87);
+  transform: translateY(0);
+  opacity: 1;
+  background-color: transparent;
 }
 
 @media (max-width: 780px) {
   .closed {
+    z-index: -1;
     transform: translateY(-100%);
     opacity: 0;
-    z-index: -1;
   }
 }
 
 .burger-container {
-  align-items: center;
   display: flex;
+  align-items: center;
   position: relative;
 }
 
 .menu-btn {
-  position: relative;
   display: block;
+  position: relative;
   width: 3em;
-  padding-inline-start: 0.655em;
   cursor: pointer;
+  padding-inline-start: 0.655em;
 }
 
 .menu-btn::before,
 .menu-btn::after {
-  background-color: #ffffff;
-  content: '';
   display: block;
   height: 4px;
+  content: '';
   transition: transform 0.5s ease-in-out;
+  background-color: #ffffff;
 }
 
 .menu-btn:before {
   box-shadow: 0 10px 0 #ffffff;
 }
 
-.menu-btn:hover::before, .menu-btn:hover::after {
+.menu-btn:hover::before,
+.menu-btn:hover::after {
   background-color: #f69f02;
 }
 
@@ -147,8 +149,8 @@ body {
 }
 
 .checkbox-input:checked + .menu-btn:before {
-  box-shadow: none;
   transform: translateY(0.1em) rotate(495deg);
+  box-shadow: none;
 }
 
 .checkbox-input:checked + .menu-btn:after {
@@ -156,29 +158,30 @@ body {
 }
 
 .checkbox-input {
-  left: 15%;
-  opacity: 0;
   position: absolute;
   top: 15%;
+  left: 15%;
   z-index: -1;
+  opacity: 0;
 }
 
 .menu-btn-text {
-  align-self: stretch;
-  background: black;
   flex: 1;
+  align-self: stretch;
+  text-align: center;
+  background: black;
   padding-block: 0.4555em;
-  text-align: center;}
+}
 
 .main-section {
-  background-color: #c1eccd;
-  box-shadow: -1px -1px 1px 0 #717171;
   display: flex;
   flex-direction: column;
-  font-size: 1em;
   height: 100%;
-  overflow: hidden;
+  font-size: 1em;
   z-index: 100;
+  overflow: hidden;
+  background-color: #c1eccd;
+  box-shadow: -1px -1px 1px 0 #717171;
 }
 
 .logout:hover {
@@ -186,22 +189,22 @@ body {
 }
 
 .chart-container {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .chart-item-wrapper {
-  align-items: center;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .chart {
+  width: 100%;
   font-family: 'Ubuntu', serif;
   font-size: 1.1em;
-  width: 100%;
 }
 
 @media (min-width: 480px) {
@@ -213,15 +216,14 @@ body {
 }
 
 @media (min-width: 780px) {
-
   .content-wrapper {
     display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    height: 100%;
-    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    grid-template-columns: 0.5fr 2fr;
   }
 
   :is(.checkbox-input, .menu-btn) {
@@ -236,7 +238,6 @@ body {
     position: relative;
     z-index: 100;
   }
-
 }
 
 @media (min-width: 800px) {

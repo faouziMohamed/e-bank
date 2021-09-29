@@ -1,17 +1,15 @@
-'use strict';
-
 function useMainMenu() {
-  let mainMenu = document.querySelector('.main-menu') || null;
-  let input = document.querySelector('.checkbox-input') || null;
+  const mainMenu = document.querySelector('.main-menu') || null;
+  const input = document.querySelector('.checkbox-input') || null;
   if (mainMenu === null || input === null) {
     return;
   }
 
-  let toggleOpenCloseMenu = () => {
+  const toggleOpenCloseMenu = () => {
     mainMenu.classList.toggle('closed');
   };
 
-  let closeMenu = () => {
+  const closeMenu = () => {
     mainMenu.classList.add('closed');
     input.checked = false;
   };
@@ -28,7 +26,7 @@ function useMainMenu() {
     }
   }
 
-  let media = matchMedia('(max-width: 779px)');
+  const media = matchMedia('(max-width: 779px)');
   media.addEventListener('change', setMediaQuery);
   setMediaQuery(media);
 }

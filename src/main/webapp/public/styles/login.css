@@ -1,23 +1,23 @@
 @import url('global.css');
 
 .main-body {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   background-image: linear-gradient(-45deg, peru 50%, cyan 60%);
 }
 
 .body-content {
-  background-image: linear-gradient(
-   #352b01a6 20%,
-   #010d245e 80%,
-   #0001028a 98%
-  );
-  border-radius: 9px 9px;
-  box-shadow: 1px 2px 15px 2px #000f0785;
-  color: #f3feff;
   padding: 9px;
+  color: #f3feff;
+  border-radius: 9px 9px;
+  background-image: linear-gradient(
+    #352b01a6 20%,
+    #010d245e 80%,
+    #0001028a 98%
+  );
+  box-shadow: 1px 2px 15px 2px #000f0785;
 }
 
 .title {
@@ -26,17 +26,17 @@
 }
 
 .auth-form {
-  align-items: center;
   display: flex;
-  font-size: 1.4em;
   justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
 }
 
 .form-content {
-  background-color: #00454599;
-  border-radius: 0.4em;
-  padding: 0.5em;
   width: 22em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  background-color: #00454599;
 }
 
 .label-auth,
@@ -45,10 +45,10 @@
 }
 
 .input-field {
-  border-radius: 1em;
+  width: 100%;
   height: 2em;
   padding: 1em;
-  width: 100%;
+  border-radius: 1em;
 }
 
 .row-content:not(:last-child) {
@@ -57,31 +57,31 @@
 
 .btn-row {
   display: flex;
-  gap: 0.3em;
   justify-content: flex-end;
+  gap: 0.3em;
 }
 
 .reset-btn,
 .submit-btn {
+  display: block;
+  padding: 0.3em;
+  font-size: 0.7em;
+  cursor: pointer;
+  text-align: center;
   border: 1px solid #80808057;
   border-radius: 9px;
-  cursor: pointer;
-  display: block;
-  font-size: 0.7em;
-  padding: 0.3em;
-  text-align: center;
 }
 
 .reset-btn {
+  color: white;
   background-color: darkslategrey;
   box-shadow: 1px 2px 3px black;
-  color: white;
 }
 
 .submit-btn {
+  color: azure;
   background-color: #002866;
   box-shadow: 1px 2px 3px black;
-  color: azure;
 }
 
 .submit-btn:hover {

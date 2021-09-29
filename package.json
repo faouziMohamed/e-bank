@@ -1,0 +1,16 @@
+{
+  "name": "FzBank",
+  "version": "1.0.0",
+  "description": "Evolutive Online bank",
+  "main": "index.js",
+  "repository": "git@github.com:faouziMohamed/login-page.git",
+  "author": "Faouzi Mohamed <57812398+faouziMohamed@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "webpack": "^5.55.0"
+  }
+}

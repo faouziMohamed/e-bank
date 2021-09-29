@@ -1,21 +1,21 @@
 /* @import url("https://pro.fontawesome.com/releases/v5.15.2/css/all.css"); */
 
 body {
+  display: flex;
+  align-items: flex-start;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: bisque;
-  display: flex;
-  align-items: flex-start;
   width: 100%;
   height: 100%;
+  background-color: bisque;
 }
 
 *,
 ::before,
 ::after {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -31,44 +31,45 @@ a:visited {
 
 .scaled-profile-pic-wrapper {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   width: 4.1em;
-  justify-content: space-evenly;
   color: #fdfdfd;
 }
 
 .user-profile-picture-scaled {
   min-width: 2.1em;
-  background-color: #223344;
   border: 1px solid #b5c2c2;
   border-radius: 50%;
+  background-color: #223344;
 }
 
-.sort-down, .user-profile-picture-scaled {
+.sort-down,
+.user-profile-picture-scaled {
   cursor: pointer;
 }
 
 .menu {
-  position: relative;
   display: flex;
   justify-content: flex-end;
+  position: relative;
   width: 100%;
-  padding-inline-end: 0.4em;
   background-color: #03162f;
+  padding-inline-end: 0.4em;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   top: calc(100% + 0.6em);
-
-  display: flex;
   width: 10em;
   min-width: 5em;
-  flex-direction: column;
-  border-radius: 0.65em;
-  border: 1px solid gray;
-  background-color: #03162f;
   color: aliceblue;
+  border: 1px solid gray;
+  border-radius: 0.65em;
+  background-color: #03162f;
   box-shadow: 1px 1px 1px 2px #223344;
 }
 
@@ -92,36 +93,36 @@ a:visited {
 
 .user-picture {
   display: block;
-  background-color: rgb(225, 225, 225);
-  border-radius: 50%;
   width: 8.675em;
   height: 8.675em;
   padding: 0.1em;
+  border-radius: 50%;
+  background-color: rgb(225, 225, 225);
 }
 
 .user-name {
   display: block;
-  padding-block-start: 0.5em;
-  padding-inline: 0.2em;
+  width: 100%;
   font-weight: bold;
   text-align: center;
   background-color: rgba(43, 81, 99, 0.51);
-  width: 100%;
+  padding-block-start: 0.5em;
+  padding-inline: 0.2em;
   border-block-end: 3px solid rgb(4, 22, 22);
 }
 
 .action-wrapper {
   display: flex;
-  width: 100%;
-  flex-flow: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
   list-style-type: none;
 }
 
 .actions-item {
-  flex: 1 0 100%;
   display: block;
+  flex: 1 0 100%;
   width: 100%;
 }
 
@@ -129,9 +130,9 @@ a:visited {
   display: block;
   width: 100%;
   padding: 0.16em 0.5em;
-  border-block-end: 0.001em solid gray;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-block-end: 0.001em solid gray;
 }
 
 .action-item-link:hover {
@@ -151,13 +152,13 @@ a:visited {
   display: block;
   position: absolute;
   top: -1.7em;
+  right: 0.5em;
+  align-self: flex-end;
+  z-index: 100;
   border-style: solid;
+  border-color: transparent transparent #03162f transparent;
   border-block-width: 1em;
   border-inline-width: 0.5em;
-  align-self: flex-end;
-  border-color: transparent transparent #03162f transparent;
-  z-index: 100;
-  right: 0.5em;
 }
 
 .hidden {

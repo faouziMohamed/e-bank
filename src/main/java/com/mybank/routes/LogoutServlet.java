@@ -1,4 +1,4 @@
-package com.mybank.controller;
+package com.mybank.routes;
 
 import com.mybank.exception.NoClientConnectedException;
 

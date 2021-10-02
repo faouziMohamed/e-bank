@@ -1,7 +1,7 @@
-package com.mybank.controller.api;
+package com.mybank.routes.api;
 
 import com.google.gson.Gson;
-import com.mybank.controller.ServletUtils;
+import com.mybank.routes.ServletUtils;
 import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.Client;
 

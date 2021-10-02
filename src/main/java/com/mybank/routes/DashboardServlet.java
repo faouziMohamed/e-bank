@@ -1,4 +1,4 @@
-package com.mybank.controller;
+package com.mybank.routes;
 
 import com.google.gson.Gson;
 import com.mybank.exception.NoClientConnectedException;

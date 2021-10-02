@@ -1,4 +1,4 @@
-package com.mybank.controller.http.errors;
+package com.mybank.routes.http.errors;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -13,6 +13,10 @@ public abstract class BankAccount {
     this.wording = wording;
   }
 
+  public static long getAccountIdBase() {
+    return accountIdBase;
+  }
+
   public String getWording() {
     return wording;
   }
@@ -21,22 +25,18 @@ public abstract class BankAccount {
     return balance;
   }
 
-  public static long getAccountIdBase() {
-    return accountIdBase;
-  }
-
   public long getAccountId() {
     return accountId;
   }
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) { return true; }
-    if (o == null || getClass() != o.getClass()) { return false; }
+    if (this == o) {return true;}
+    if (o == null || getClass() != o.getClass()) {return false;}
 
     BankAccount that = (BankAccount) o;
 
-    if (getAccountId() != that.getAccountId()) { return false; }
+    if (getAccountId() != that.getAccountId()) {return false;}
     if (Double.compare(that.getBalance(), getBalance()) != 0) {
       return false;
     }

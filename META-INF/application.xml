@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="https://jakarta.ee/xml/ns/jakartaee"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/application_9.xsd"
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="https://javax.ee/xml/ns/javaxee"
+             xsi:schemaLocation="https://javax.ee/xml/ns/javaxee https://javax.ee/xml/ns/javaxee/application_9.xsd"
              version="9">
 
 </application>

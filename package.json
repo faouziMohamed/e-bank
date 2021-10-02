@@ -1,5 +1,5 @@
 {
-  "name": "FzBank",
+  "name": "fz-bank",
   "version": "1.0.0",
   "description": "Evolutive Online bank",
   "main": "index.js",
@@ -7,10 +7,25 @@
   "author": "Faouzi Mohamed <57812398+faouziMohamed@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "format": "prettier  --write './src/**/*.{js,css,json}'",
+    "lint": "eslint ./src --ext js --fix --cache",
+    "build:js": "webpack --progress",
+    "build:sass": "sass --watch --style=compressed src/public/sass:src/public/styles/"
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "eslint": "^7.32.0",
-    "prettier": "^2.4.1",
-    "webpack": "^5.55.0"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.4.1"
   }
 }

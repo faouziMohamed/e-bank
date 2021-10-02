@@ -1,0 +1,82 @@
+@import url('./clayout.css');
+@import url('./button.css');
+@import url('./modal.css');
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #00bcd4;
+  padding-block-start: 1rem;
+}
+
+.transfer-form {
+  max-width: 31.5rem;
+}
+.search-result {
+  display: block;
+  position: absolute;
+  top: 108%;
+  left: 0;
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  z-index: 10;
+  overflow: auto;
+  color: rgb(1, 39, 37);
+  border: 1px solid rgb(216, 230, 223);
+  border-radius: var(--form-input-radius);
+  background-color: #ecfaff;
+  box-shadow: 0 0 0.08rem 0.01rem rgba(200, 242, 255, 0.925);
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 3px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+  border: 1px solid rgba(205, 230, 225, 0.315);
+  border-radius: var(--form-input-radius);
+  background-color: #d4fce8;
+  gap: 0.3rem;
+}
+
+.result-name {
+  font-size: 0.7rem;
+  color: rgb(14, 63, 66);
+}
+
+.result-name::before,
+.result-id::before {
+  font-family: 'Font Awesome 5 Pro', serif;
+}
+
+.result-name::before {
+  content: '\f007';
+  padding-inline: 0.1rem 0.5rem;
+}
+
+.result-id::before {
+  content: '\f09d';
+  padding-inline-end: 0.4rem;
+}
+
+.result-item:is(:hover, :focus) {
+  border: 1px solid rgba(59, 186, 190, 0.274);
+  background-color: #b5fdccef;
+}

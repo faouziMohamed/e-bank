@@ -1,0 +1,19 @@
+@import url('./clayout.css');
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.chart {
+  width: 100%;
+  font-family: 'Ubuntu', serif;
+  font-size: 1.1em;
+}

@@ -1,0 +1,62 @@
+@import url('global.css');
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-block: 1rem;
+  background-image: linear-gradient(-45deg, peru 50%, cyan 60%);
+}
+
+@media (max-height: 240px) {
+  .main-body {
+    align-items: flex-start;
+  }
+}
+
+.body-content {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  border-radius: 9px 9px;
+  background-image: linear-gradient(
+    65deg,
+    #46bdace6 20%,
+    #08d0a1eb 80%,
+    #00f9d6d6 98%
+  );
+  box-shadow: 1px 2px 20px #bacec41c;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 560px) {
+  .body-content {
+    width: 33.68rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.auth-msg {
+  font-size: 0.78rem;
+  font-family: serif;
+  font-weight: 900;
+  background-color: #ffa906;
+  color: #fff;
+  padding: 0.3rem;
+  margin-block-start: 0.5rem;
+  width: 80%;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 0 .5rem .03rem #e8e8e8;
+}
+.btn-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3em;
+}

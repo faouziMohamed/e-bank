@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="https://jakarta.ee/xml/ns/jakartaee"
-  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+  xmlns="https://javax.ee/xml/ns/javaxee"
+  xsi:schemaLocation="https://javax.ee/xml/ns/javaxee https://javax.ee/xml/ns/javaxee/web-app_5_0.xsd"
   version="5.0">
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>com.mybank.controller.LoginServlet</servlet-class>
+    <servlet-class>com.mybank.routes.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -15,7 +15,7 @@
 
   <servlet>
     <servlet-name>DashboardServlet</servlet-name>
-    <servlet-class>com.mybank.controller.DashboardServlet</servlet-class>
+    <servlet-class>com.mybank.routes.DashboardServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DashboardServlet</servlet-name>
@@ -24,7 +24,7 @@
 
   <servlet>
     <servlet-name>CurrentAccountsServlet</servlet-name>
-    <servlet-class>com.mybank.controller.CurrentAccountsServlet
+    <servlet-class>com.mybank.routes.CurrentAccountsServlet
     </servlet-class>
   </servlet>
   <servlet-mapping>
@@ -34,7 +34,7 @@
 
   <servlet>
     <servlet-name>SavingAccountsServlet</servlet-name>
-    <servlet-class>com.mybank.controller.SavingAccountsServlet
+    <servlet-class>com.mybank.routes.SavingAccountsServlet
     </servlet-class>
   </servlet>
   <servlet-mapping>
@@ -44,7 +44,7 @@
 
   <servlet>
     <servlet-name>TransferServlet</servlet-name>
-    <servlet-class>com.mybank.controller.TransferServlet
+    <servlet-class>com.mybank.routes.TransferServlet
     </servlet-class>
   </servlet>
   <servlet-mapping>
@@ -54,7 +54,7 @@
 
   <servlet>
     <servlet-name>LogoutServlet</servlet-name>
-    <servlet-class>com.mybank.controller.LogoutServlet</servlet-class>
+    <servlet-class>com.mybank.routes.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
@@ -63,7 +63,7 @@
 
   <servlet>
     <servlet-name>UserApiServlet</servlet-name>
-    <servlet-class>com.mybank.controller.api.UserApiServlet</servlet-class>
+    <servlet-class>com.mybank.routes.api.UserApiServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UserApiServlet</servlet-name>
@@ -72,7 +72,7 @@
 
   <servlet>
     <servlet-name>Error404Servlet</servlet-name>
-    <servlet-class>com.mybank.controller.http.errors.Error404Servlet
+    <servlet-class>com.mybank.routes.http.errors.Error404Servlet
     </servlet-class>
   </servlet>
   <servlet-mapping>
@@ -82,7 +82,8 @@
 
   <servlet>
     <servlet-name>Error401Servlet</servlet-name>
-    <servlet-class>com.mybank.controller.http.errors.Error401Servlet</servlet-class>
+    <servlet-class>com.mybank.routes.http.errors.Error401Servlet
+    </servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Error401Servlet</servlet-name>

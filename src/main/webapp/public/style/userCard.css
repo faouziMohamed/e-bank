@@ -1,40 +1,27 @@
-/* @import url("https://pro.fontawesome.com/releases/v5.15.2/css/all.css"); */
-
-body {
-  display: flex;
-  align-items: flex-start;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: bisque;
-}
-
-*,
-::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: rgb(239, 253, 198);
-}
-
-:is(a, a:visited):hover {
-  text-decoration: underline;
-}
-
 .scaled-profile-pic-wrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 4.1em;
   color: #fdfdfd;
+}
+
+.user-profile-picture-scaled {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #b5c2c2;
+  border-radius: 50%;
+  background-color: #223344;
+  object-fit: cover;
+}
+
+.user-profile-picture-scaled {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #b5c2c2;
+  border-radius: 50%;
+  background-color: #223344;
+  object-fit: cover;
 }
 
 .user-profile-picture-scaled {
@@ -61,16 +48,16 @@ a:visited {
 .wrapper {
   display: flex;
   flex-direction: column;
-
   position: absolute;
   top: calc(100% + 0.6em);
   width: 10em;
   min-width: 5em;
-  color: aliceblue;
+  color: #eaf2fa;
   border: 1px solid gray;
   border-radius: 0.65em;
   background-color: #03162f;
   box-shadow: 1px 1px 1px 2px #223344;
+  z-index: 100;
 }
 
 .user-profile {
@@ -89,12 +76,15 @@ a:visited {
   justify-content: center;
   align-items: center;
   padding-block: 0.4em;
+  width: 8.675rem;
+  height: 9.5rem;
 }
 
 .user-picture {
   display: block;
-  width: 8.675em;
-  height: 8.675em;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   padding: 0.1em;
   border-radius: 50%;
   background-color: rgb(225, 225, 225);
@@ -128,9 +118,10 @@ a:visited {
 
 .action-item-link {
   display: block;
+  color: rgb(239, 253, 198);
   width: 100%;
   padding: 0.16em 0.5em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-block-end: 0.001em solid gray;
 }

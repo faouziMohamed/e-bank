@@ -1,0 +1,9 @@
+{
+  "uri": "http://localhost:8080/login",
+  "method": "POST",
+  "body": "{\n  \"password\":\t\"12345\"\n  \"username\":\t\"faouzi\"\n}",
+  "headers": {
+    "Accept": "*/*",
+    "Content-Type": "*/*"
+  }
+}

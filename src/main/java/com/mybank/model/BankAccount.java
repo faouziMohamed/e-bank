@@ -1,14 +1,18 @@
 package com.mybank.model;
 
+import java.util.Objects;
+
+import static com.mybank.utils.Utils.toHex;
+
 public abstract class BankAccount {
   protected static long accountIdBase = 4845892L;
-  protected long accountId;
+  protected String accountId;
   protected double balance;
   protected String wording;
 
-  public BankAccount(double balance
-    , String wording) {
-    this.accountId = this.hashCode() + accountIdBase++;
+  public BankAccount(double balance, String wording) {
+    String id = "-" + (this.hashCode() + accountIdBase++);
+    this.accountId = "A4F" + toHex(id).toUpperCase();
     this.balance = balance;
     this.wording = wording;
   }
@@ -25,33 +29,24 @@ public abstract class BankAccount {
     return balance;
   }
 
-  public long getAccountId() {
+  public String getAccountId() {
     return accountId;
   }
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {return true;}
-    if (o == null || getClass() != o.getClass()) {return false;}
-
-    BankAccount that = (BankAccount) o;
-
-    if (getAccountId() != that.getAccountId()) {return false;}
-    if (Double.compare(that.getBalance(), getBalance()) != 0) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return getWording() != null ? getWording().equals(that.getWording()) :
-             that.getWording() == null;
+    BankAccount that = (BankAccount) o;
+    return Double.compare(that.getBalance(), getBalance()) == 0 && Objects.equals(getAccountId(), that.getAccountId()) && Objects.equals(getWording(), that.getWording());
   }
 
   @Override
   public int hashCode() {
-    int result;
-    long temp;
-    result = (int) (getAccountId() ^ (getAccountId() >>> 32));
-    temp = Double.doubleToLongBits(getBalance());
-    result = 31 * result + (int) (temp ^ (temp >>> 32));
-    result = 31 * result + (getWording() != null ? getWording().hashCode() : 0);
-    return result;
+    return Objects.hash(getAccountId(), getBalance(), getWording());
   }
 }

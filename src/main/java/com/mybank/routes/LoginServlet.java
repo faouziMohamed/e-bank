@@ -1,5 +1,6 @@
 package com.mybank.routes;
 
+import com.mybank.controller.ServletUtils;
 import com.mybank.exception.BankException;
 import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.BankService;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static com.mybank.controller.Utils.getFullPath;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet implements ServletUtils {

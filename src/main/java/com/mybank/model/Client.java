@@ -8,9 +8,9 @@ public class Client {
     new TreeMap<>();
   private final TreeMap<String, CurrentAccount> allCurrentAccount =
     new TreeMap<>();
-  private String username;
-  private String password;
-  private String firstName;
+  private final String username;
+  private final String password;
+  private final String firstName;
   private String lastName;
 
   public Client(String username, String password, String firstName,
@@ -36,7 +36,7 @@ public class Client {
     this(username, password, firstName, lastName, new TreeMap<>(),
          new TreeMap<>());
     String[] allNames = getAllNames();
-    String wording = allNames[getIdName(allNames.length)];
+    String wording = allNames[ getIdName(allNames.length) ];
     addNewSavingAccount(balance, wording);
   }
 
@@ -58,8 +58,8 @@ public class Client {
     String[] firstNames = getListFirstNames();
     String[] familyNames = getListFamilyNames();
 
-    String firstName = firstNames[getIdName(firstNames.length)];
-    String familyName = familyNames[getIdName(familyNames.length)];
+    String firstName = firstNames[ getIdName(firstNames.length) ];
+    String familyName = familyNames[ getIdName(familyNames.length) ];
 
     Client c = new Client(username, password, firstName, familyName);
     if (numSva > 0) {
@@ -78,7 +78,7 @@ public class Client {
     for (int i = 0; i < numAccount; i++) {
       double balance =
         getRandomNumber(Math.random() * getRandomNumber(54.6)) * 1000 * Math.random();
-      String wording = allNames[getIdName(allNames.length)];
+      String wording = allNames[ getIdName(allNames.length) ];
       a.addAccount(balance, wording);
     }
   }
@@ -87,43 +87,41 @@ public class Client {
     String[] first = getListFirstNames();
     String[] familyName = getListFamilyNames();
 
-    String[] allNames = new String[first.length + familyName.length];
+    String[] allNames = new String[ first.length + familyName.length ];
     System.arraycopy(first, 0, allNames, 0, first.length);
     System.arraycopy(familyName, 0, allNames, first.length, familyName.length);
     return allNames;
   }
 
   private static String[] getListFamilyNames() {
-    return new String[]{
-      "Faouzi", "Mohamed", "Marwan", "Ayoub", "Silkhi", "Mouzaoir",
-      "Adourahmane", "Malcolm", "Salim", "Mourchid", "Fateh", "Karmen",
-      "Youssouf", "Karim", "Ragragui", "Azhar", "Ben Moussa", "Mourinho",
-      "Souleyman", "Camara", "Naissoune", "Jarir", "Abd El-Hakim", "Mofid",
-      "Abdoulali", "Khalil", "Rachid", "John", "Snow", "Barry", "Allen",
-      "Joe", "Moussa", "Tony", "Stark", "Steeve", "Rogers", "Romanov",
-      "West", "Paris", "Morgan", "Freeman", "Kennedy", "Donald", "Trump",
-      "Khalifa", "James", "Said", "Ali", "Ramone", "Cisco", "Slade", "Wilson",
-      "Skywalker", "Palpatine", "Luke", "Lando", "Ray", "Kayloren", "Vader",
-      "Bob", "Patrick", "Chanfi", "Moulay Hassa", "Moulay Rachid", "Rachid",
-      "Hassan", "Clark", "Kent", "Jones", "Frank", "Ronaldo", "Faouzoudine"
-    };
+    return new String[]{ "Faouzi", "Mohamed", "Marwan", "Ayoub", "Silkhi",
+      "Mouzaoir", "Adourahmane", "Malcolm", "Salim", "Mourchid", "Fateh",
+      "Karmen", "Youssouf", "Karim", "Ragragui", "Azhar", "Ben Moussa",
+      "Mourinho", "Souleyman", "Camara", "Naissoune", "Jarir", "Abd El-Hakim"
+      , "Mofid", "Abdoulali", "Khalil", "Rachid", "John", "Snow", "Barry",
+      "Allen", "Joe", "Moussa", "Tony", "Stark", "Steeve", "Rogers", "Romanov"
+      , "West", "Paris", "Morgan", "Freeman", "Kennedy", "Donald", "Trump",
+      "Khalifa", "James", "Said", "Ali", "Ramone", "Cisco", "Slade", "Wilson"
+      , "Skywalker", "Palpatine", "Luke", "Lando", "Ray", "Kayloren", "Vader"
+      , "Bob", "Patrick", "Chanfi", "Moulay Hassa", "Moulay Rachid", "Rachid"
+      , "Hassan", "Clark", "Kent", "Jones", "Frank", "Ronaldo", "Faouzoudine" };
   }
 
   private static String[] getListFirstNames() {
-    return new String[]{
-      "Maryam", "Dounia", "Dounya", "Batma", "Fatima Zahra", "FatimaZahra",
-      "Mohamed", "Abtal", "Moukrimat", "Nouhaila", "El-Mouden", "Faouzi",
-      "Chaimae", "Chaymae", "West", "Paris", "Morgan", "Freeman", "Kennedy",
-      "Donald", "Trump", "Khalifa", "James", "Said", "Ali", "Ramone", "Cisco",
-      "Slade", "Wilson", "Rebecca", "Sara", "Najma", "Oumy", "Kara", "Fatima",
-      "Maymouna", "Samir", "Mourchid", "Khawla", "Khawlat", "Said", "Jessica",
-      "Alex", "Denvers", "Avicii", "Snow", "Sambi", "Idriss", "Morgan", "Ali",
-      "Mahmat", "Oumar", "Nioukousa", "Alpha", "Mamadou", "Ahmady",
-      "Senoussi", "Haggar", "Halim", "Aneflous", "Salma", "Sanima",
-      "Dahilou", "Nasma", "Karima", "Fayad", "Ahmada", "Imane", "Nadia",
-      "Yassem", "Joundan", "Aichat", "Saber", "Imam", "CJ", "Mze", "Asmae",
-      "Nasra", "Haidar", "Nas", "Kenza", "Natacha", "Romanof", "Kassandra"
-    };
+    return new String[]{ "Maryam", "Dounia", "Dounya", "Batma", "Fatima " +
+                                                                  "Zahra",
+      "FatimaZahra", "Mohamed", "Abtal", "Moukrimat", "Nouhaila", "El-Mouden"
+      , "Faouzi", "Chaimae", "Chaymae", "West", "Paris", "Morgan", "Freeman",
+      "Kennedy", "Donald", "Trump", "Khalifa", "James", "Said", "Ali",
+      "Ramone", "Cisco", "Slade", "Wilson", "Rebecca", "Sara", "Najma", "Oumy"
+      , "Kara", "Fatima", "Maymouna", "Samir", "Mourchid", "Khawla", "Khawlat"
+      , "Said", "Jessica", "Alex", "Denvers", "Avicii", "Snow", "Sambi",
+      "Idriss", "Morgan", "Ali", "Mahmat", "Oumar", "Nioukousa", "Alpha",
+      "Mamadou", "Ahmady", "Senoussi", "Haggar", "Halim", "Aneflous", "Salma"
+      , "Sanima", "Dahilou", "Nasma", "Karima", "Fayad", "Ahmada", "Imane",
+      "Nadia", "Yassem", "Joundan", "Aichat", "Saber", "Imam", "CJ", "Mze",
+      "Asmae", "Nasra", "Haidar", "Nas", "Kenza", "Natacha", "Romanof",
+      "Kassandra" };
   }
 
   private void addNewSavingAccount(double balance, String wording) {
@@ -166,57 +164,82 @@ public class Client {
     return allCurrentAccount;
   }
 
+  public TreeMap<String, BasicData> getBasicData(String accType) {
+
+    TreeMap<String, BasicData> cl = new TreeMap<>();
+    if (accType.equals("sva")) {
+      allSavingAccount.forEach((k, v) -> cl.put(v.getAccountId(),
+                                                new BasicData(v.getAccountId(), v.getWording())));
+    }
+    else if (accType.equals("cra")) {
+      allCurrentAccount.forEach((k, v) -> cl.put(v.getAccountId(),
+                                                 new BasicData(v.getAccountId(), v.getWording())));
+    }
+    return cl;
+  }
+
   @Override
   public boolean equals(Object o) {
-    if (this == o) {return true;}
-    if (o == null || getClass() != o.getClass()) {return false;}
+    if (this == o) { return true; }
+    if (o == null || getClass() != o.getClass()) { return false; }
 
     Client client = (Client) o;
 
     if (getUsername() != null ? !getUsername().equals(client.getUsername()) :
-          client.getUsername() != null) {
+        client.getUsername() != null) {
       return false;
     }
     if (getPassword() != null ? !getPassword().equals(client.getPassword()) :
-          client.getPassword() != null) {
+        client.getPassword() != null) {
       return false;
     }
     if (getFirstName() != null ?
-          !getFirstName().equals(client.getFirstName()) :
-          client.getFirstName() != null) {
+        !getFirstName().equals(client.getFirstName()) :
+        client.getFirstName() != null) {
       return false;
     }
     if (getLastName() != null ? !getLastName().equals(client.getLastName()) :
-          client.getLastName() != null) {
+        client.getLastName() != null) {
       return false;
     }
     if (getAllSavingAccount() != null ?
-          !getAllSavingAccount().equals(client.getAllSavingAccount()) :
-          client.getAllSavingAccount() != null) {
+        !getAllSavingAccount().equals(client.getAllSavingAccount()) :
+        client.getAllSavingAccount() != null) {
       return false;
     }
     return getAllCurrentAccount() != null ?
-             getAllCurrentAccount().equals(client.getAllCurrentAccount()) :
-             client.getAllCurrentAccount() == null;
+           getAllCurrentAccount().equals(client.getAllCurrentAccount()) :
+           client.getAllCurrentAccount() == null;
   }
 
   @Override
   public int hashCode() {
     int result = getUsername() != null ? getUsername().hashCode() : 0;
     result = 31 * result + (getPassword() != null ? getPassword().hashCode()
-                              : 0);
+                                                  : 0);
     result = 31 * result + (getFirstName() != null ?
-                              getFirstName().hashCode() : 0);
+                            getFirstName().hashCode() : 0);
     result = 31 * result + (getLastName() != null ? getLastName().hashCode()
-                              : 0);
+                                                  : 0);
     result = 31 * result + (getAllSavingAccount() != null ?
-                              getAllSavingAccount().hashCode() : 0);
+                            getAllSavingAccount().hashCode() : 0);
     result = 31 * result + (getAllCurrentAccount() != null ?
-                              getAllCurrentAccount().hashCode() : 0);
+                            getAllCurrentAccount().hashCode() : 0);
     return result;
   }
 
   private interface AccountInterface {
     void addAccount(double balance, String wording);
   }
+
+  public static class BasicData {
+    public String id;
+    public String wording;
+
+    public BasicData(String id, String wd) {
+      this.id = id;
+      this.wording = wd;
+    }
+  }
+
 }

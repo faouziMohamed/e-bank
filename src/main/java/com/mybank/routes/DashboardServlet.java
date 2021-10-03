@@ -1,6 +1,7 @@
 package com.mybank.routes;
 
 import com.google.gson.Gson;
+import com.mybank.controller.ServletUtils;
 import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.Client;
 
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalTime;
+
+import static com.mybank.controller.Utils.sendUserToLoginPage;
 
 @WebServlet(name = "DashboardServlet", value = "/dashboard")
 public class DashboardServlet extends HttpServlet implements ServletUtils {

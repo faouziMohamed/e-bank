@@ -1,5 +1,6 @@
 package com.mybank.routes;
 
+import com.mybank.controller.ServletUtils;
 import com.mybank.exception.NoClientConnectedException;
 import com.mybank.model.Client;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static com.mybank.controller.Utils.sendUserToLoginPage;
 
 @WebServlet(name = "SavingAccountsServlet", value = "/savingAccounts")
 public class SavingAccountsServlet extends HttpServlet implements ServletUtils {
@@ -36,6 +39,5 @@ public class SavingAccountsServlet extends HttpServlet implements ServletUtils {
   @Override
   protected void doPost(HttpServletRequest request,
                         HttpServletResponse response) throws ServletException, IOException {
-
   }
 }

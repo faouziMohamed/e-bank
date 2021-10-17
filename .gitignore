@@ -37,3 +37,4 @@ buildNumber.properties
 .eslintcache
 node_modules
 out
+/bin/

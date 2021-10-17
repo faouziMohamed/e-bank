@@ -27,11 +27,11 @@
     src="${pageContext.request.contextPath}/public/js/layout/layout.js">
   </script>
 
-    <script
-     type="module"
-     async
-     src="${pageContext.request.contextPath}/public/js/dashboard/dashboard.js">
-    </script>
+  <script
+    type="module"
+    async
+    src="${pageContext.request.contextPath}/public/js/dashboard/dashboard.js">
+  </script>
 
   <script
     type="module"

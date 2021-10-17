@@ -11,17 +11,14 @@ public class BankService {
 
   private BankService() {
     allClients = new TreeMap<>();
-    Client[] arr = {
-      Client.getTestClient("faouzi", "12345", 9, 2),
-      Client.getTestClient("fsk", "67890", 15, 4),
-      Client.getTestClient("hadi", "password", 11, 9),
-      Client.getTestClient("douze", "linux", 3, 5),
-      Client.getTestClient("fsk21", "12345", 0, 12),
-      Client.getTestClient("mohamed", "faouzi", 6, 41),
-      Client.getTestClient("admin", "admin", 21, 9),
-      Client.getTestClient("guest", "pass", 6, 7),
-      Client.getTestClient("fawzi", "math", 4, 3)
-    };
+    Client[] arr = { Client.getTestClient("faouzi", "12345", 9, 2),
+      Client.getTestClient("fsk", "67890", 15, 4), Client.getTestClient("hadi"
+      , "password", 11, 9), Client.getTestClient("douze", "linux", 3, 5),
+      Client.getTestClient("fsk21", "12345", 0, 12), Client.getTestClient(
+        "mohamed", "faouzi", 6, 41), Client.getTestClient("admin", "admin",
+                                                          21, 9),
+      Client.getTestClient("guest", "pass", 6, 7), Client.getTestClient(
+        "fawzi", "math", 4, 3) };
 
     for (Client c : arr) {
       allClients.put(c.getUsername(), c);

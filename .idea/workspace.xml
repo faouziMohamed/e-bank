@@ -10,22 +10,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb063da4-a839-4f19-b93a-979711fd3b40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybank/controller/ServletUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybank/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/controller/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/controller/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/controller/ServletUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/controller/ServletUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/controller/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/controller/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/exception/ClientNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/exception/ClientNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/exception/NoClientConnectedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/exception/NoClientConnectedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/exception/PasswordErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/exception/PasswordErrorException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/model/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/model/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/model/BankService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/model/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/model/SavingAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/CurrentAccountsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/CurrentAccountsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/DashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/DashboardServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/LogoutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/SavingAccountsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/SavingAccountsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/ServletUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/TransferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/TransferServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/api/UserApiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/api/UserApiServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/api/UsersDataApiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/api/UsersDataApiServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/http/errors/Error401Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/http/errors/Error401Servlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybank/routes/http/errors/Error404Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybank/routes/http/errors/Error404Servlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/connected/topnav.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/connected/topnav.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/currentAccounts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/currentAccounts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/savingAccounts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/savingAccounts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/transfer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users/transfer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/api/user/accounts/cra.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/api/user/accounts/cra.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/api/user/accounts/sva.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/api/user/accounts/sva.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/js/dashboard/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/js/dashboard/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/js/transfer/transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/js/transfer/transfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/js/utils/modal/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/js/utils/modal/basic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/js/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/js/utils/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/clayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/clayout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/forms/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/forms/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/forms/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/forms/dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/modifier.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/modifier.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/transfer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/transfer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/style/userCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/style/userCard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +80,8 @@
         <option value="Enum" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -116,7 +144,7 @@
     <property name="project.structure.side.proportion" value="0.28965518" />
     <property name="rearrange.code.on.save" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+    <property name="settings.editor.selected.configurable" value="0d570cb2-96df-43cc-80da-7f777e6d0afe" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
@@ -537,7 +565,10 @@
       <workItem from="1633117161698" duration="3060000" />
       <workItem from="1633120408843" duration="23462000" />
       <workItem from="1633175825393" duration="1063000" />
-      <workItem from="1633177064574" duration="35955000" />
+      <workItem from="1633177064574" duration="36736000" />
+      <workItem from="1633275274009" duration="5488000" />
+      <workItem from="1633316710906" duration="4386000" />
+      <workItem from="1634477734878" duration="1357000" />
     </task>
     <servers />
   </component>

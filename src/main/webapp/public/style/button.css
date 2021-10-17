@@ -9,7 +9,7 @@ button:disabled {
 }
 
 .form-row--btn:not(:disabled) {
-  animation: bg-change 1s ease;
+  animation: bg-change 1s ease infinite;
 }
 
 @keyframes bg-change {

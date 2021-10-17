@@ -37,9 +37,7 @@ public class DashboardServlet extends HttpServlet implements ServletUtils {
       request.setAttribute("cra", craJsonStr);
 
       ShowDashboardPage(request, response);
-    } catch (IllegalStateException
-               | NullPointerException
-               | NoClientConnectedException e) {
+    } catch (IllegalStateException | NullPointerException | NoClientConnectedException e) {
       request.setAttribute("error", "You need to connect in order to continue");
       sendUserToLoginPage(request, response);
     }
@@ -47,9 +45,7 @@ public class DashboardServlet extends HttpServlet implements ServletUtils {
 
   private void ShowDashboardPage(HttpServletRequest request,
                                  HttpServletResponse response) throws ServletException, IOException {
-    this.getServletContext()
-        .getRequestDispatcher("/WEB-INF/users/dashboard.jsp")
-        .forward(request, response);
+    this.getServletContext().getRequestDispatcher("/WEB-INF/users/dashboard" + ".jsp").forward(request, response);
   }
 
   @Override

@@ -13,8 +13,6 @@ public class Error401Servlet extends HttpServlet {
   protected void doGet(HttpServletRequest request,
                        HttpServletResponse response) throws ServletException,
                                                             IOException {
-    this.getServletContext()
-        .getRequestDispatcher("/WEB-INF/errors/401.jsp")
-        .forward(request, response);
+    this.getServletContext().getRequestDispatcher("/WEB-INF/errors/401.jsp").forward(request, response);
   }
 }

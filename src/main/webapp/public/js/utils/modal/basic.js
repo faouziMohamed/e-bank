@@ -29,7 +29,9 @@ export const modalTemplate = ({
   const qst = modal.querySelector('.modal-txt.qst');
   const cancelBtn = modal.querySelector('.modal-btn.modal-cancel');
   const okBtn = modal.querySelector('.modal-btn.modal-ok');
-  if (!content) throw new Error('Modal content is required');
+  if (!content) {
+    throw new Error('Modal content is required');
+  }
   msg.replaceChildren(content);
   [okBtn, cancelBtn].forEach((btn) =>
     btn.addEventListener('click', (e) => e.preventDefault()),

@@ -2,7 +2,7 @@ import { drawUserData } from './userData.js';
 
 (() => {
   function fetchUserData() {
-    fetch('/userdata')
+    fetch('/api/user/data')
       .then((response) => response.json())
       .then((data) =>
         drawUserData({
@@ -14,5 +14,6 @@ import { drawUserData } from './userData.js';
       // eslint-disable-next-line no-console
       .catch(console.log);
   }
+
   fetchUserData();
 })();

@@ -27,9 +27,7 @@ public class TransferServlet extends HttpServlet implements ServletUtils {
       request.setAttribute("hour", hour);
       request.setAttribute("client", client);
       request.setAttribute("data", client.getAllSavingAccount().values());
-      this.getServletContext()
-          .getRequestDispatcher("/WEB-INF/users/transfer.jsp")
-          .forward(request, response);
+      this.getServletContext().getRequestDispatcher("/WEB-INF/users/transfer" + ".jsp").forward(request, response);
     } catch (IllegalStateException | NullPointerException | NoClientConnectedException e) {
       request.setAttribute("error", "You need to connect in order to continue");
       sendUserToLoginPage(request, response);

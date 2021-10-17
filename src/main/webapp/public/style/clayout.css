@@ -65,9 +65,9 @@ body {
 }
 
 .main-header {
+  min-width: 224px;
   font-size: 1em;
   color: #01fd7f;
-  min-width: 224px;
 }
 
 .main-navbar {

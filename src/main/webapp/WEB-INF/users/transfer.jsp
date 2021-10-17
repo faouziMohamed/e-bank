@@ -8,13 +8,56 @@
     <form class="gentle-form transfer-form" id="transfer-form">
       <div class="modal-container hidden" id="modal-container"></div>
       <section class="form-content">
-        <h2 class="form-title">Find User card ID</h2>
+        <h2 class="form-title">Sender card ID</h2>
         <fieldset class="form-group form-fieldset">
+          <legend class="sr-only">Sender account</legend>
+          <div class="form-dropdown" id="dp-acctype">
+            <p class="form-dropdown-label" id="dp-acctype-label" tabindex="0">
+              Saving Account
+            </p>
+            <div class="dropdown-content hidden" id="dp-acctype-content">
+              <ul class="dropdown-list">
+                <li class="dropdown-item" tabindex="0" data-acctype="sva">
+                  <span class="dropdown-text">Saving Account</span>
+                </li>
+                <li class="dropdown-item" tabindex="0" data-acctype="cra">
+                  <span class="dropdown-text">Current Account</span>
+                </li>
+              </ul>
+            </div>
+          </div>
           <label class="form-row">
             <input
-              type="text"
-              name="searchId"
-              id="search-input"
+              type="search"
+              name="senderID"
+              id="senderID"
+              class="form-row--input"
+              placeholder=" "
+              autocomplete="off"
+            />
+            <span class="form-row--label">
+                <i class="row-label--icon fas fa-credit-card"></i>
+                <span class="row-label--text">Type the account name or ID</span>
+              </span>
+            <button class="form-row--btn btn-clickable" name="senderOkBtn">
+              <i class="fad fa-forward"></i>
+            </button>
+          </label>
+          <div class="search-result" id="sender-search-res">
+            <ul class="result-list" id="sender-res-list"></ul>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="form-content">
+        <h2 class="form-title">Receiver card ID</h2>
+        <fieldset class="form-group form-fieldset">
+          <legend class="sr-only">Receiver account</legend>
+          <label class="form-row">
+            <input
+              type="search"
+              name="receiverID"
+              id="receiverID"
               class="form-row--input"
               placeholder=" "
               autocomplete="off"
@@ -23,19 +66,20 @@
                 <i class="row-label--icon fas fa-credit-card"></i>
                 <span class="row-label--text">Type account ID</span>
               </span>
-            <button class="form-row--btn" name="searchBtn">
-              <i class="fas fa-check-circle"></i>
+            <button class="form-row--btn" name="receiverOkBtn">
+              <i class="fad fa-forward"></i>
             </button>
           </label>
-          <div class="search-result" id="search-result">
-            <ul class="result-list" id="result-list"></ul>
+          <div class="search-result" id="receiver-search-res">
+            <ul class="result-list" id="receiver-res-list"></ul>
           </div>
         </fieldset>
       </section>
 
       <section class="form-content disabled">
-        <h2 class="form-title">Set an amount to transfert</h2>
+        <h2 class="form-title">Amount to send</h2>
         <fieldset class="form-group form-fieldset">
+          <legend class="sr-only">Setting amount to send</legend>
           <label class="form-row">
             <input
               type="text"

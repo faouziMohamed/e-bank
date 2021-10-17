@@ -22,12 +22,12 @@ public class Utils {
     return data;
   }
 
-  static public String createCraJSONFromClient(Client client) {
-    return new Gson().toJson(client.getAllCurrentAccount().values());
-  }
-
   static public String createSvaJSONFromCLient(Client client) {
     return new Gson().toJson(client.getAllSavingAccount().values());
+  }
+
+  static public String createCraJSONFromClient(Client client) {
+    return new Gson().toJson(client.getAllCurrentAccount().values());
   }
 
   static public TreeMap<String, ArrayList<String>> parseQueryString(HttpServletRequest request) throws UnsupportedEncodingException {
@@ -47,14 +47,12 @@ public class Utils {
       ArrayList<String> values = new ArrayList<String>();
       if (keyValuePair.length == 1) { values.add(""); }
       else {
-        Collections
-          .addAll(values, keyValuePair[ 1 ].split(","));
+        Collections.addAll(values, keyValuePair[ 1 ].split(","));
       }
       queryParameters.put(keyValuePair[ 0 ], values);
     }
     return queryParameters;
   }
-
 
   static public Client getClientFromHttpSession(HttpServletRequest request) {
     HttpSession session = request.getSession(false);
@@ -62,7 +60,7 @@ public class Utils {
   }
 
   static public void sendUserToLoginPage(HttpServletRequest request,
-                                   HttpServletResponse response) throws IOException {
+                                         HttpServletResponse response) throws IOException {
     response.sendRedirect(request.getContextPath() + "/login");
   }
 

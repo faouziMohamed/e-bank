@@ -25,9 +25,8 @@ public class CurrentAccountsServlet extends HttpServlet implements ServletUtils 
       request.setAttribute("header1", "Wording");
       request.setAttribute("header2", "Balance");
       request.setAttribute("allAccounts", c.getAllCurrentAccount().values());
-      this.getServletContext()
-          .getRequestDispatcher("/WEB-INF/users/currentAccounts.jsp")
-          .forward(request, response);
+      this.getServletContext().getRequestDispatcher("/WEB-INF/users" +
+                                                      "/currentAccounts.jsp").forward(request, response);
     } catch (NullPointerException | NoClientConnectedException e) {
       sendUserToLoginPage(request, response);
     }

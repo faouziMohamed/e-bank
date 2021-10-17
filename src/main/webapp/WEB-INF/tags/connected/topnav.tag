@@ -5,11 +5,11 @@
   <nav class="menu" aria-label="menu">
     <div class="scaled-profile-pic-wrapper">
       <img
-       alt="User profile picture"
-       class="user-profile-picture-scaled"
-       src="${pageContext.request.contextPath}/public/images/coder.gif"
-       title="${client.username}'s profile picture"
-       width="250" />
+        alt="User profile picture"
+        class="user-profile-picture-scaled"
+        src="${pageContext.request.contextPath}/public/images/coder.gif"
+        title="${client.username}'s profile picture"
+        width="250" />
       <i class="fas fa-sort-down sort-down"></i>
     </div>
     <div class="wrapper hidden">
@@ -18,11 +18,11 @@
         <figure class="user-figure">
           <div class="user-picture-wrapper">
             <img
-             src="${pageContext.request.contextPath}/public/images/coder.gif"
-             alt="User profile picture"
-             class="user-picture"
-             width="250"
-             height="250"
+              src="${pageContext.request.contextPath}/public/images/coder.gif"
+              alt="User profile picture"
+              class="user-picture"
+              width="250"
+              height="250"
             />
           </div>
           <figcaption class="user-name">

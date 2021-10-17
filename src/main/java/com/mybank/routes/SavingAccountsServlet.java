@@ -28,9 +28,8 @@ public class SavingAccountsServlet extends HttpServlet implements ServletUtils {
       request.setAttribute("header3", "Interest Rate");
       request.setAttribute("header4", "Ceiling");
       request.setAttribute("allAccounts", c.getAllSavingAccount().values());
-      this.getServletContext()
-          .getRequestDispatcher("/WEB-INF/users/savingAccounts.jsp")
-          .forward(request, response);
+      this.getServletContext().getRequestDispatcher("/WEB-INF/users" +
+                                                      "/savingAccounts.jsp").forward(request, response);
     } catch (NullPointerException | NoClientConnectedException e) {
       sendUserToLoginPage(request, response);
     }

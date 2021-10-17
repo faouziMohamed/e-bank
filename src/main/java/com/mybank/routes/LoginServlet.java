@@ -19,6 +19,14 @@ import static com.mybank.controller.Utils.getFullPath;
 public class LoginServlet extends HttpServlet implements ServletUtils {
 
   @Override
+  public void destroy() {
+    // TODO: add code
+  }
+
+  @Override
+  public void init() {
+    // TODO: add code
+  }  @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     try {
       // IF there a client already connected this will
@@ -30,18 +38,17 @@ public class LoginServlet extends HttpServlet implements ServletUtils {
 
       request.setAttribute("title", "Authentication page");
       request.setAttribute("pageHeading", "Welcome to your online Bank");
-      this
-        .getServletContext()
-        .getRequestDispatcher("/WEB-INF/login.jsp")
-        .forward(request, response);
+      this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
   }
 
+
+
   @Override
   public void doPost(HttpServletRequest request,
-                     HttpServletResponse response)
-    throws IOException, ServletException {
+                     HttpServletResponse response) throws IOException,
+                                                          ServletException {
     try {
       String username = getUsername(request);
       String password = getPassword(request);
@@ -65,29 +72,17 @@ public class LoginServlet extends HttpServlet implements ServletUtils {
   }
 
   private Client getClientFromDB(String username, String password) throws BankException {
-    return BankService
-      .getInstance()
-      .findClient(username, password);
+    return BankService.getInstance().findClient(username, password);
   }
 
-  private void redirectUserToMainPage(
-    HttpServletResponse response, String mainPage) throws IOException {
+  private void redirectUserToMainPage(HttpServletResponse response,
+                                      String mainPage) throws IOException {
     response.sendRedirect(mainPage);
   }
 
   private void acceptAuthentication(HttpServletRequest request, Client client) {
     request.setAttribute("client", client);
-    request.getSession(true)
-           .setAttribute("client", client);
+    request.getSession(true).setAttribute("client", client);
   }
 
-  @Override
-  public void destroy() {
-    // TODO: add code
-  }
-
-  @Override
-  public void init() {
-    // TODO: add code
-  }
 }

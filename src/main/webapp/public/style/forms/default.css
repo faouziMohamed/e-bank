@@ -1,5 +1,6 @@
 @import url('../button.css');
 @import url('../modal.css');
+@import url('./dropdown.css');
 
 :root {
   --form-btn-ok-with: 2.1rem;

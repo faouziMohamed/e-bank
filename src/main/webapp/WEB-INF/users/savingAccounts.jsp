@@ -30,18 +30,18 @@
           <td class="col-data"><c:out value="${account.wording}" /></td>
           <td class="col-data">
             <fmt:formatNumber
-             value="${account.balance}"
-             type="number" />
+              value="${account.balance}"
+              type="number" />
           </td>
           <td class="col-data">
             <fmt:formatNumber
-             value="${account.interestRate}"
-             type="number" />
+              value="${account.interestRate}"
+              type="number" />
           </td>
           <td class="col-data">
             <fmt:formatNumber
-             value="${account.ceiling}"
-             type="number" />
+              value="${account.ceiling}"
+              type="number" />
           </td>
         </tr>
       </c:forEach>

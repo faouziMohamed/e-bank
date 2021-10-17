@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import static com.mybank.controller.Utils.getClientFromHttpSession;
 
 public interface ServletUtils {
-  default Client assertThereIsClientConnected(HttpServletRequest request)
-    throws NoClientConnectedException {
+  default Client assertThereIsClientConnected(HttpServletRequest request) throws NoClientConnectedException {
     Client client = getClientFromHttpSession(request);
     if (client == null) {
       throw new NoClientConnectedException();

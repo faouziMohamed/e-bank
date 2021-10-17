@@ -17,20 +17,21 @@ public abstract class BankAccount {
     this.wording = wording;
   }
 
-  public static long getAccountIdBase() {
-    return accountIdBase;
+  @Override
+  public int hashCode() {
+    return Objects.hash(getAccountId(), getBalance(), getWording());
   }
 
-  public String getWording() {
-    return wording;
+  public String getAccountId() {
+    return accountId;
   }
 
   public double getBalance() {
     return balance;
   }
 
-  public String getAccountId() {
-    return accountId;
+  public String getWording() {
+    return wording;
   }
 
   @Override
@@ -45,8 +46,7 @@ public abstract class BankAccount {
     return Double.compare(that.getBalance(), getBalance()) == 0 && Objects.equals(getAccountId(), that.getAccountId()) && Objects.equals(getWording(), that.getWording());
   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(getAccountId(), getBalance(), getWording());
+  public static long getAccountIdBase() {
+    return accountIdBase;
   }
 }

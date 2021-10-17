@@ -67,7 +67,16 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>UserApiServlet</servlet-name>
-    <url-pattern>/userdata</url-pattern>
+    <url-pattern>/api/user/data</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UsersApiData</servlet-name>
+    <servlet-class>com.mybank.routes.api.UsersDataApiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersApiData</servlet-name>
+    <url-pattern>/api/account/data/id/*</url-pattern>
   </servlet-mapping>
 
   <servlet>

@@ -5,7 +5,9 @@ export function parseHTML(html) {
 
 export function handleEnterKeyPres(el) {
   return (e) => {
-    if (e.key !== 'Enter' || el.disabled) return;
+    if (e.key !== 'Enter' || el.disabled) {
+      return;
+    }
     el.click();
   };
 }

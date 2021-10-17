@@ -22,7 +22,7 @@ import static com.mybank.controller.Utils.*;
  * <i>Note that this endpoint is designed for the current connected user
  * only: retrieving it's data.
  * <br>
- * Use <b>/api/user/userid</b> instead to get other users data
+ * Use <b>/api/account/data/id/&lt;userdId&gt;</b> instead to get other users data
  * </i>
  * <ul>
  *   <li> When no query passed the API send all data </li>
@@ -41,7 +41,7 @@ import static com.mybank.controller.Utils.*;
  *    </li>
  * </ul>
  */
-@WebServlet(name = "UserApiServlet", value = "/userdata")
+@WebServlet(name = "UserApiServlet", value = "/api/user/data")
 public class UserApiServlet extends HttpServlet implements ServletUtils {
   @Override
   protected void doGet(HttpServletRequest request,
@@ -80,12 +80,9 @@ public class UserApiServlet extends HttpServlet implements ServletUtils {
     sendResponse(response, data);
   }
 
-  private void sendFilteredData(HttpServletResponse response, Client client,
-                                String accType) throws IOException {
+  private void sendAllData(HttpServletResponse response, Client client) throws IOException {
     String data;
-    System.out.println(accType);
-    data = accType.equals("sva") ? createSvaJSONFromCLient(client) :
-           createCraJSONFromClient(client);
+    data = getAllAccountData(client);
     sendResponse(response, data);
   }
 
@@ -97,9 +94,12 @@ public class UserApiServlet extends HttpServlet implements ServletUtils {
     sendResponse(response, data);
   }
 
-  private void sendAllData(HttpServletResponse response, Client client) throws IOException {
+  private void sendFilteredData(HttpServletResponse response, Client client,
+                                String accType) throws IOException {
     String data;
-    data = getAllAccountData(client);
+    System.out.println(accType);
+    data = accType.equals("sva") ? createSvaJSONFromCLient(client) :
+           createCraJSONFromClient(client);
     sendResponse(response, data);
   }
 
